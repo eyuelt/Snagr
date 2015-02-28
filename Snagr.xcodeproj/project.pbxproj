@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28B2536C1AA2656E00AB5C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2536B1AA2656E00AB5C76 /* AppDelegate.swift */; };
+		28B2536E1AA2656E00AB5C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2536D1AA2656E00AB5C76 /* ViewController.swift */; };
+		28B253711AA2656E00AB5C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B2536F1AA2656E00AB5C76 /* Main.storyboard */; };
+		28B253731AA2656E00AB5C76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B253721AA2656E00AB5C76 /* Images.xcassets */; };
+		28B253761AA2656E00AB5C76 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B253741AA2656E00AB5C76 /* LaunchScreen.xib */; };
+		28B253821AA2656E00AB5C76 /* SnagrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B253811AA2656E00AB5C76 /* SnagrTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28B2537C1AA2656E00AB5C76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28B2535E1AA2656E00AB5C76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28B253651AA2656E00AB5C76;
+			remoteInfo = Snagr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28B253661AA2656E00AB5C76 /* Snagr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snagr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B2536A1AA2656E00AB5C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B2536B1AA2656E00AB5C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28B2536D1AA2656E00AB5C76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28B253701AA2656E00AB5C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28B253721AA2656E00AB5C76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		28B253751AA2656E00AB5C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		28B2537B1AA2656E00AB5C76 /* SnagrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnagrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B253801AA2656E00AB5C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B253811AA2656E00AB5C76 /* SnagrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnagrTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28B253631AA2656E00AB5C76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B253781AA2656E00AB5C76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28B2535D1AA2656E00AB5C76 = {
+			isa = PBXGroup;
+			children = (
+				28B253681AA2656E00AB5C76 /* Snagr */,
+				28B2537E1AA2656E00AB5C76 /* SnagrTests */,
+				28B253671AA2656E00AB5C76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28B253671AA2656E00AB5C76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28B253661AA2656E00AB5C76 /* Snagr.app */,
+				28B2537B1AA2656E00AB5C76 /* SnagrTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28B253681AA2656E00AB5C76 /* Snagr */ = {
+			isa = PBXGroup;
+			children = (
+				28B2536B1AA2656E00AB5C76 /* AppDelegate.swift */,
+				28B2536D1AA2656E00AB5C76 /* ViewController.swift */,
+				28B2536F1AA2656E00AB5C76 /* Main.storyboard */,
+				28B253721AA2656E00AB5C76 /* Images.xcassets */,
+				28B253741AA2656E00AB5C76 /* LaunchScreen.xib */,
+				28B253691AA2656E00AB5C76 /* Supporting Files */,
+			);
+			path = Snagr;
+			sourceTree = "<group>";
+		};
+		28B253691AA2656E00AB5C76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28B2536A1AA2656E00AB5C76 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28B2537E1AA2656E00AB5C76 /* SnagrTests */ = {
+			isa = PBXGroup;
+			children = (
+				28B253811AA2656E00AB5C76 /* SnagrTests.swift */,
+				28B2537F1AA2656E00AB5C76 /* Supporting Files */,
+			);
+			path = SnagrTests;
+			sourceTree = "<group>";
+		};
+		28B2537F1AA2656E00AB5C76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28B253801AA2656E00AB5C76 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28B253651AA2656E00AB5C76 /* Snagr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B253851AA2656E00AB5C76 /* Build configuration list for PBXNativeTarget "Snagr" */;
+			buildPhases = (
+				28B253621AA2656E00AB5C76 /* Sources */,
+				28B253631AA2656E00AB5C76 /* Frameworks */,
+				28B253641AA2656E00AB5C76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Snagr;
+			productName = Snagr;
+			productReference = 28B253661AA2656E00AB5C76 /* Snagr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28B2537A1AA2656E00AB5C76 /* SnagrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B253881AA2656E00AB5C76 /* Build configuration list for PBXNativeTarget "SnagrTests" */;
+			buildPhases = (
+				28B253771AA2656E00AB5C76 /* Sources */,
+				28B253781AA2656E00AB5C76 /* Frameworks */,
+				28B253791AA2656E00AB5C76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28B2537D1AA2656E00AB5C76 /* PBXTargetDependency */,
+			);
+			name = SnagrTests;
+			productName = SnagrTests;
+			productReference = 28B2537B1AA2656E00AB5C76 /* SnagrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28B2535E1AA2656E00AB5C76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Alexander Hsu";
+				TargetAttributes = {
+					28B253651AA2656E00AB5C76 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					28B2537A1AA2656E00AB5C76 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 28B253651AA2656E00AB5C76;
+					};
+				};
+			};
+			buildConfigurationList = 28B253611AA2656E00AB5C76 /* Build configuration list for PBXProject "Snagr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28B2535D1AA2656E00AB5C76;
+			productRefGroup = 28B253671AA2656E00AB5C76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28B253651AA2656E00AB5C76 /* Snagr */,
+				28B2537A1AA2656E00AB5C76 /* SnagrTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28B253641AA2656E00AB5C76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B253711AA2656E00AB5C76 /* Main.storyboard in Resources */,
+				28B253761AA2656E00AB5C76 /* LaunchScreen.xib in Resources */,
+				28B253731AA2656E00AB5C76 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B253791AA2656E00AB5C76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28B253621AA2656E00AB5C76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B2536E1AA2656E00AB5C76 /* ViewController.swift in Sources */,
+				28B2536C1AA2656E00AB5C76 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B253771AA2656E00AB5C76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B253821AA2656E00AB5C76 /* SnagrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28B2537D1AA2656E00AB5C76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28B253651AA2656E00AB5C76 /* Snagr */;
+			targetProxy = 28B2537C1AA2656E00AB5C76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28B2536F1AA2656E00AB5C76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B253701AA2656E00AB5C76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28B253741AA2656E00AB5C76 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B253751AA2656E00AB5C76 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28B253831AA2656E00AB5C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28B253841AA2656E00AB5C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28B253861AA2656E00AB5C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Snagr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		28B253871AA2656E00AB5C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Snagr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		28B253891AA2656E00AB5C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SnagrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snagr.app/Snagr";
+			};
+			name = Debug;
+		};
+		28B2538A1AA2656E00AB5C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SnagrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snagr.app/Snagr";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28B253611AA2656E00AB5C76 /* Build configuration list for PBXProject "Snagr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B253831AA2656E00AB5C76 /* Debug */,
+				28B253841AA2656E00AB5C76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28B253851AA2656E00AB5C76 /* Build configuration list for PBXNativeTarget "Snagr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B253861AA2656E00AB5C76 /* Debug */,
+				28B253871AA2656E00AB5C76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		28B253881AA2656E00AB5C76 /* Build configuration list for PBXNativeTarget "SnagrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B253891AA2656E00AB5C76 /* Debug */,
+				28B2538A1AA2656E00AB5C76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28B2535E1AA2656E00AB5C76 /* Project object */;
+}
