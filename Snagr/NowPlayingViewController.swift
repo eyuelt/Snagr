@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate {
+class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate, ControlSpeechRecognizerDelegate {
     
     let songs: [Song] = [
         Song(title: "Chandelier", artist: "Sia"),
@@ -53,9 +53,12 @@ class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    let controlSpeechRecognizer: ControlSpeechRecognizer = ControlSpeechRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        SpeechRecognizer().setup()
+        controlSpeechRecognizer.delegate = self
+        controlSpeechRecognizer.setup()
         
         clearSongHistory()
         let pingPath = NSBundle.mainBundle().pathForResource("Audio/ping", ofType:"mp3")
@@ -64,19 +67,19 @@ class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate {
         
         //notification
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(7 * NSEC_PER_SEC)), dispatch_get_main_queue()) { [unowned self] in
-            self.dimMusicAndDo() {
+            self.dimMusicAndDo(dimLength: 1) {
                 self.pingPlayer.play()
                 self.songSnagged()
             }
         }
     }
     
-    func dimMusicAndDo(handler: () -> Void) {
+    func dimMusicAndDo(#dimLength: Float, handler: () -> Void) {
         let savedVolume = self.player.volume
         self.player.volume /= 3
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Float(NSEC_PER_SEC))), dispatch_get_main_queue()) { [unowned self] in
             handler()
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Float(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(dimLength * Float(NSEC_PER_SEC))), dispatch_get_main_queue()) {
                 self.player.volume = savedVolume
             }
         }
@@ -121,6 +124,17 @@ class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate {
         song.status = "Completed"
         addSongToHistory(song)
         nextSong();
+    }
+    
+    //MARK: ControlSpeechRecognizerDelegate
+    func requestedSkip() {
+        NSLog("skip");
+    }
+    func requestedPlay() {
+        NSLog("play");
+    }
+    func requestedPause() {
+        NSLog("pause");
     }
 }
 

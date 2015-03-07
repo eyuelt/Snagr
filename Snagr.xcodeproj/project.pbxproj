@@ -15,11 +15,11 @@
 		28B2538C1AA265B600AB5C76 /* SongListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2538B1AA265B600AB5C76 /* SongListTVC.swift */; };
 		28B2538E1AA2660D00AB5C76 /* SongListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2538D1AA2660D00AB5C76 /* SongListTableViewCell.swift */; };
 		28DB88961AA275D9008D202C /* SongDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DB88951AA275D9008D202C /* SongDetailVC.swift */; };
-		F04E0CB51AAB4DE900E92D71 /* SpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F04E0CB41AAB4DE900E92D71 /* SpeechRecognizer.m */; };
 		F04E0CC11AAB542F00E92D71 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F04E0CBD1AAB542F00E92D71 /* AcousticModelEnglish.bundle */; };
 		F04E0CC21AAB542F00E92D71 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F04E0CBE1AAB542F00E92D71 /* AcousticModelSpanish.bundle */; };
 		F04E0CC31AAB542F00E92D71 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04E0CBF1AAB542F00E92D71 /* OpenEars.framework */; };
 		F04E0CC41AAB542F00E92D71 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04E0CC01AAB542F00E92D71 /* Slt.framework */; };
+		F04E0CC71AAB59C100E92D71 /* ControlSpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F04E0CC61AAB59C100E92D71 /* ControlSpeechRecognizer.m */; };
 		F05850F91AA2C4CC0073478F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05850F81AA2C4CC0073478F /* Song.swift */; };
 		F05850FB1AA2CC710073478F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = F05850FA1AA2CC710073478F /* Images */; };
 		F0930D7E1AA2A9EA00D4B41F /* SongHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0930D7D1AA2A9EA00D4B41F /* SongHistory.swift */; };
@@ -51,12 +51,12 @@
 		28B2538D1AA2660D00AB5C76 /* SongListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListTableViewCell.swift; sourceTree = "<group>"; };
 		28DB88951AA275D9008D202C /* SongDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailVC.swift; sourceTree = "<group>"; };
 		F04E0CAF1AAB4C9C00E92D71 /* Snagr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snagr-Bridging-Header.h"; sourceTree = "<group>"; };
-		F04E0CB31AAB4DE900E92D71 /* SpeechRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognizer.h; sourceTree = "<group>"; };
-		F04E0CB41AAB4DE900E92D71 /* SpeechRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechRecognizer.m; sourceTree = "<group>"; };
 		F04E0CBD1AAB542F00E92D71 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		F04E0CBE1AAB542F00E92D71 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
 		F04E0CBF1AAB542F00E92D71 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		F04E0CC01AAB542F00E92D71 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		F04E0CC51AAB59C100E92D71 /* ControlSpeechRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSpeechRecognizer.h; sourceTree = "<group>"; };
+		F04E0CC61AAB59C100E92D71 /* ControlSpeechRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlSpeechRecognizer.m; sourceTree = "<group>"; };
 		F05850F81AA2C4CC0073478F /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F05850FA1AA2CC710073478F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		F0930D7D1AA2A9EA00D4B41F /* SongHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongHistory.swift; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				F0A1514A1AA28D4F00352313 /* NowPlayingViewController.swift */,
-				F04E0CB31AAB4DE900E92D71 /* SpeechRecognizer.h */,
-				F04E0CB41AAB4DE900E92D71 /* SpeechRecognizer.m */,
+				F04E0CC51AAB59C100E92D71 /* ControlSpeechRecognizer.h */,
+				F04E0CC61AAB59C100E92D71 /* ControlSpeechRecognizer.m */,
 				F05850F81AA2C4CC0073478F /* Song.swift */,
 				F0930D7D1AA2A9EA00D4B41F /* SongHistory.swift */,
 				28DB88951AA275D9008D202C /* SongDetailVC.swift */,
@@ -271,9 +271,9 @@
 				28B2538E1AA2660D00AB5C76 /* SongListTableViewCell.swift in Sources */,
 				F0A1514B1AA28D4F00352313 /* NowPlayingViewController.swift in Sources */,
 				28B2538C1AA265B600AB5C76 /* SongListTVC.swift in Sources */,
+				F04E0CC71AAB59C100E92D71 /* ControlSpeechRecognizer.m in Sources */,
 				28B2536C1AA2656E00AB5C76 /* AppDelegate.swift in Sources */,
 				F0930D7E1AA2A9EA00D4B41F /* SongHistory.swift in Sources */,
-				F04E0CB51AAB4DE900E92D71 /* SpeechRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

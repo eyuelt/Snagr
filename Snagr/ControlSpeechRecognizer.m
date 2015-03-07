@@ -1,12 +1,12 @@
 //
-//  SpeechRecognizer.m
+//  ControlSpeechRecognizer.m
 //  Snagr
 //
 //  Created by Eyuel Tessema on 3/7/15.
 //  Copyright (c) 2015 Alexander Hsu. All rights reserved.
 //
 
-#import "SpeechRecognizer.h"
+#import "ControlSpeechRecognizer.h"
 
 #import <OpenEars/OEPocketsphinxController.h>
 #import <OpenEars/OEFliteController.h>
@@ -15,7 +15,7 @@
 #import <OpenEars/OEAcousticModel.h>
 #import <Slt/Slt.h>
 
-@interface SpeechRecognizer ()
+@interface ControlSpeechRecognizer ()
 
 @property (nonatomic, strong) Slt *slt;
 
@@ -41,7 +41,7 @@
 @end
 
 
-@implementation SpeechRecognizer
+@implementation ControlSpeechRecognizer
 
 + (void)hello
 {
@@ -74,14 +74,13 @@
     // This is the language model we're going to start up with. The only reason I'm making it a class property is that I reuse it a bunch of times in this example, 
     // but you can pass the string contents directly to OEPocketsphinxController:startListeningWithLanguageModelAtPath:dictionaryAtPath:languageModelIsJSGF:
     
-    NSArray *firstLanguageArray = @[@"BACKWARD",
+    NSArray *firstLanguageArray = @[@"SKIP",
+                                    @"PLAY",
+                                    @"PAUSE",
+                                    @"LIKE",
                                     @"CHANGE",
-                                    @"FORWARD",
-                                    @"GO",
-                                    @"LEFT",
                                     @"MODEL",
-                                    @"RIGHT",
-                                    @"TURN"];
+                                    @"GO"];
     
     OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc] init]; 
     
@@ -196,6 +195,12 @@
             [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToFirstDynamicallyGeneratedLanguageModel withDictionary:self.pathToFirstDynamicallyGeneratedDictionary];
             self.usingStartingLanguageModel = TRUE;
         }
+    } else if ([hypothesis isEqualToString:@"SKIP"]) {
+        [self.delegate requestedSkip];
+    } else if ([hypothesis isEqualToString:@"PLAY"]) {
+        [self.delegate requestedPlay];
+    } else if ([hypothesis isEqualToString:@"PAUSE"]) {
+        [self.delegate requestedPause];
     }
     
 //    self.heardTextView.text = [NSString stringWithFormat:@"Heard: \"%@\"", hypothesis]; // Show it in the status box.
