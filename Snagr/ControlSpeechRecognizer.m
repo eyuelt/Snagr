@@ -178,38 +178,42 @@
 - (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
     
     NSLog(@"Local callback: The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID); // Log it.
-    if([hypothesis isEqualToString:@"CHANGE MODEL"]) { // If the user says "CHANGE MODEL", we will switch to the alternate model (which happens to be the dynamically generated model).
-        
-        // Here is an example of language model switching in OpenEars. Deciding on what logical basis to switch models is your responsibility.
-        // For instance, when you call a customer service line and get a response tree that takes you through different options depending on what you say to it,
-        // the models are being switched as you progress through it so that only relevant choices can be understood. The construction of that logical branching and 
-        // how to react to it is your job, OpenEars just lets you send the signal to switch the language model when you've decided it's the right time to do so.
-        
-        if(self.usingStartingLanguageModel) { // If we're on the starting model, switch to the dynamically generated one.
+    int score = recognitionScore.intValue;
+    
+    if (score == 0) { //make sure we're confident
+        if([hypothesis isEqualToString:@"CHANGE MODEL"]) { // If the user says "CHANGE MODEL", we will switch to the alternate model (which happens to be the dynamically generated model).
             
-            // You can only change language models with ARPA grammars in OpenEars (the ones that end in .languagemodel or .DMP). 
-            // Trying to switch between JSGF models (the ones that end in .gram) will return no result.
-            [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToSecondDynamicallyGeneratedLanguageModel withDictionary:self.pathToSecondDynamicallyGeneratedDictionary]; 
-            self.usingStartingLanguageModel = FALSE;
-        } else { // If we're on the dynamically generated model, switch to the start model (this is just an example of a trigger and method for switching models).
-            [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToFirstDynamicallyGeneratedLanguageModel withDictionary:self.pathToFirstDynamicallyGeneratedDictionary];
-            self.usingStartingLanguageModel = TRUE;
+            // Here is an example of language model switching in OpenEars. Deciding on what logical basis to switch models is your responsibility.
+            // For instance, when you call a customer service line and get a response tree that takes you through different options depending on what you say to it,
+            // the models are being switched as you progress through it so that only relevant choices can be understood. The construction of that logical branching and 
+            // how to react to it is your job, OpenEars just lets you send the signal to switch the language model when you've decided it's the right time to do so.
+            
+            if(self.usingStartingLanguageModel) { // If we're on the starting model, switch to the dynamically generated one.
+                
+                // You can only change language models with ARPA grammars in OpenEars (the ones that end in .languagemodel or .DMP). 
+                // Trying to switch between JSGF models (the ones that end in .gram) will return no result.
+                [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToSecondDynamicallyGeneratedLanguageModel withDictionary:self.pathToSecondDynamicallyGeneratedDictionary]; 
+                self.usingStartingLanguageModel = FALSE;
+            } else { // If we're on the dynamically generated model, switch to the start model (this is just an example of a trigger and method for switching models).
+                [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToFirstDynamicallyGeneratedLanguageModel withDictionary:self.pathToFirstDynamicallyGeneratedDictionary];
+                self.usingStartingLanguageModel = TRUE;
+            }
+        } else if ([hypothesis isEqualToString:@"SKIP"]) {
+            [self.delegate requestedSkip];
+        } else if ([hypothesis isEqualToString:@"PLAY"]) {
+            [self.delegate requestedPlay];
+        } else if ([hypothesis isEqualToString:@"PAUSE"]) {
+            [self.delegate requestedPause];
         }
-    } else if ([hypothesis isEqualToString:@"SKIP"]) {
-        [self.delegate requestedSkip];
-    } else if ([hypothesis isEqualToString:@"PLAY"]) {
-        [self.delegate requestedPlay];
-    } else if ([hypothesis isEqualToString:@"PAUSE"]) {
-        [self.delegate requestedPause];
+        
+        //    self.heardTextView.text = [NSString stringWithFormat:@"Heard: \"%@\"", hypothesis]; // Show it in the status box.
+        
+        // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
+        [self.fliteController say:[NSString stringWithFormat:@"You said %@",hypothesis] withVoice:self.slt];
     }
-    
-//    self.heardTextView.text = [NSString stringWithFormat:@"Heard: \"%@\"", hypothesis]; // Show it in the status box.
-    
-    // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
-    [self.fliteController say:[NSString stringWithFormat:@"You said %@",hypothesis] withVoice:self.slt];
 }
 
-#ifdef kGetNbest   
+#ifdef kGetNbest
 - (void) pocketsphinxDidReceiveNBestHypothesisArray:(NSArray *)hypothesisArray { // Pocketsphinx has an n-best hypothesis dictionary.
     NSLog(@"Local callback:  hypothesisArray is %@",hypothesisArray);   
 }
