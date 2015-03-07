@@ -259,7 +259,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-217" y="-730"/>
+            <point key="canvasLocation" x="-263" y="-730"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NCm-zg-pLH">
@@ -278,13 +278,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwj-Qk-mrr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1849" y="-398"/>
+            <point key="canvasLocation" x="-1889" y="-178"/>
         </scene>
-        <!--Item-->
+        <!--History-->
         <scene sceneID="ura-yG-C8K">
             <objects>
                 <navigationController id="EqG-hx-Oc1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gap-1u-RQx"/>
+                    <tabBarItem key="tabBarItem" title="History" id="gap-1u-RQx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1nw-ac-2dT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -337,11 +337,11 @@
             </objects>
             <point key="canvasLocation" x="412" y="387"/>
         </scene>
-        <!--Item 1-->
+        <!--Now Playing-->
         <scene sceneID="fpG-YD-yqB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2nt-gN-Wfm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="kRu-68-f2c"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" id="kRu-68-f2c"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SvK-kp-SO7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -354,7 +354,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhu-mT-0EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1029" y="-730"/>
+            <point key="canvasLocation" x="-925" y="-730"/>
         </scene>
     </scenes>
 </document>
