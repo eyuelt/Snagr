@@ -55,6 +55,7 @@ class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SpeechRecognizer().setup()
         
         clearSongHistory()
         let pingPath = NSBundle.mainBundle().pathForResource("Audio/ping", ofType:"mp3")
