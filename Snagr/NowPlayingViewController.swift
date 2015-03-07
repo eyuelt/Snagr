@@ -110,7 +110,7 @@ class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate, Control
         return currentSong != saved
     }
     
-    @IBAction func twoFingerTap(sender: UITapGestureRecognizer) {
+    @IBAction func twoFingerTap() {
         if player.playing {
             player.pause()
         } else {
@@ -123,18 +123,22 @@ class NowPlayingViewController: UIViewController, AVAudioPlayerDelegate, Control
         let song = songs[currentSong]
         song.status = "Completed"
         addSongToHistory(song)
-        nextSong();
+        nextSong()
     }
     
     //MARK: ControlSpeechRecognizerDelegate
     func requestedSkip() {
-        NSLog("skip");
+        nextSong()
     }
     func requestedPlay() {
-        NSLog("play");
+        if !player.playing {
+            player.play()
+        }
     }
     func requestedPause() {
-        NSLog("pause");
+        if player.playing {
+            player.pause()
+        }
     }
 }
 

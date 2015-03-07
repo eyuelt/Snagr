@@ -255,7 +255,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer numberOfTouchesRequired="2" id="v7p-wM-iP7">
                     <connections>
-                        <action selector="twoFingerTap:" destination="KoI-Vc-XDD" id="rtE-EI-bbZ"/>
+                        <action selector="twoFingerTap" destination="KoI-Vc-XDD" id="lYf-Et-48p"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
